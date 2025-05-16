@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h2>Catálogo</h2>
+        <p style="font-size: 18px;">
+            En <strong>Sistetecni</strong>, ofrecemos un moderado catálogo de <strong>computadores</strong> ya que priorizamos la calidad sobre la cantidad.
+            Recuerda que junto contigo y tu compañía como cliente podremos mejorar con el tiempo. Nuestro objetivo son estudiantes, profesionales, empresas y personas naturales.
+        </p>
+
+        <div class="btr">
+            <button type="button" class="btn btn-primary pe-2 filter-btn active" data-brand="all">
+                <img src="{{ url_for('static', filename='imagenes/logo1.jpeg') }}" alt="Todos" width="50" height="50">
+                Todos
+            </button>
+            <button type="button" class="btn btn-secondary filter-btn" data-brand="hp">
+                <img src="{{ url_for('static', filename='imagenes/hp.png') }}" alt="HP" width="50" height="50">
+            </button>
+            <button type="button" class="btn btn-secondary filter-btn" data-brand="acer">
+                <img src="{{ url_for('static', filename='imagenes/acer.png') }}" alt="acer" width="50" height="50">
+            </button>
+            <button type="button" class="btn btn-danger filter-btn" data-brand="dell">
+                <img src="{{ url_for('static', filename='imagenes/dell.png') }}" alt="Dell" width="50" height="50">
+            </button>
+             <button type="button" class="btn btn-warning filter-btn" data-brand="apple">
+                <img src="{{ url_for('static', filename='imagenes/mac.png') }}" alt="Apple" width="50" height="50">
+            </button>
+            <button type="button" class="btn btn-secondary filter-btn" data-brand="lenovo">
+                <img src="{{ url_for('static', filename='imagenes/lenovo.png') }}" alt="lenovo" width="50" height="50">
+            </button>
+        </div>
+
+        <div class="mt-5">
+            {% if session['usuario'] %}
+                {% for carousel in carousels_data %}
+                    <div class="carousel-container" data-brand="{{ carousel.brand|lower() }}">
+                        <h3>{{ carousel.name }}</h3>
+                        <div id="carousel-{{ carousel.brand|lower() }}" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for image_url in carousel.images %}
+                                    <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                        <img src="{{ image_url }}" class="d-block w-100" alt="{{ carousel.name }} - Imagen {{ loop.index }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            {% if carousel.images|length > 1 %}
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ carousel.brand|lower() }}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ carousel.brand|lower() }}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-info" role="alert">
+                    Debes iniciar sesión para ver las imágenes.
+                </div>
+                <p><a href="{{ url_for('login') }}" class="btn btn-primary">Iniciar Sesión</a></p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .filter-btn {
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn.active {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .carousel-container {
+        display: none; /* Oculta todos los carruseles por defecto */
+        margin-bottom: 20px;
+    }
+
+    .carousel-item img {
+        max-height: 400px;
+        object-fit: contain;
+        width: auto !important;
+        margin: 0 auto;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const carouselContainers = document.querySelectorAll('.carousel-container');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const selectedBrand = this.dataset.brand;
+
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                carouselContainers.forEach(container => {
+                    container.style.display = (selectedBrand === 'all' || container.dataset.brand === selectedBrand) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Muestra todos los carruseles al cargar la página
+        document.querySelector('[data-brand="all"]').click();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='imagenes/pcm.jpeg') }}" class="img-fluid rounded-start" alt="Dell Optiplex 750" height="500px" width="700px">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h2 class="card-title">Dell Optiplex 750</h2>
+                    <p class="card-text fs-5">Un equipo profesional para oficina: rápido, confiable y completo. Ideal para productividad empresarial o personal.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">💽 <strong>Disco SSD de 512 GB</strong> – Rendimiento veloz y gran capacidad</li>
+                        <li class="list-group-item">🧠 <strong>16 GB RAM</strong> – Multitarea sin interrupciones</li>
+                        <li class="list-group-item">🖥️ <strong>Monitor de 19"</strong> – Visualización cómoda</li>
+                        <li class="list-group-item">⚙️ <strong>Procesador Intel Core i5</strong> – Potente y eficiente</li>
+                        <li class="list-group-item">🖱️ <strong>Mouse inalámbrico Dell</strong></li>
+                        <li class="list-group-item">⌨️ <strong>Teclado inalámbrico Dell</strong></li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+                        <a href="#" class="btn btn-primary">Contactar o Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='imagenes/mac1.jpeg') }}" class="img-fluid rounded-start" alt="MacBook Air A2178" height="500px" width="700px">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h2 class="card-title">MacBook Air A2178</h2>
+                    <p class="card-text fs-5">Potente, elegante y ligera. Ideal para diseño gráfico, edición o tareas creativas de alto rendimiento.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">💽 <strong>Disco SSD de 512 GB</strong> – Velocidad y espacio optimizados</li>
+                        <li class="list-group-item">🧠 <strong>16 GB RAM</strong> – Multitarea sin interrupciones</li>
+                        <li class="list-group-item">🖥️ <strong>Pantalla Retina 4K de 14"</strong> – Claridad y precisión</li>
+                        <li class="list-group-item">⚙️ <strong>Procesador Intel Core i5</strong> – Equilibrio entre rendimiento y eficiencia</li>
+                        <li class="list-group-item">🔋 <strong>Batería en buen estado</strong></li>
+                        <li class="list-group-item">🧳 <strong>Diseño profesional y liviano</strong></li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+                        <a href="#" class="btn btn-primary">Contactar o Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

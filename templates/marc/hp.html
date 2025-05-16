@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="mb-4">Historia de HP (Hewlett-Packard)</h1>
+        <p class="fs-5">
+            HP, abreviatura de Hewlett-Packard, fue fundada en 1939 por Bill Hewlett y Dave Packard en un garaje de Palo Alto, California —lugar considerado el nacimiento del famoso Silicon Valley.
+        </p>
+        <p class="fs-5">
+            Su primer producto fue un oscilador de audio que fue utilizado por Walt Disney para la película <em>Fantasía</em>. Desde entonces, HP creció rápidamente y se convirtió en una de las empresas tecnológicas más influyentes del siglo XX.
+        </p>
+        <p class="fs-5">
+            A lo largo de las décadas, HP ha desarrollado y fabricado una amplia gama de productos: desde calculadoras científicas y servidores hasta impresoras y computadoras personales. Sus impresoras y laptops son especialmente populares por su calidad, durabilidad y diseño.
+        </p>
+
+        <h3 class="mt-4">📌 Datos Interesantes:</h3>
+        <ul class="fs-5">
+            <li>🏠 El famoso "Garaje de HP" en Palo Alto es considerado el lugar de nacimiento de Silicon Valley.</li>
+            <li>💼 HP fue pionera en implementar políticas laborales modernas, como horarios flexibles y participación en acciones.</li>
+            <li>🌍 HP está comprometida con la sostenibilidad: sus impresoras y cartuchos reciclables son parte de programas de economía circular.</li>
+            <li>🔄 En 2015, HP se dividió en dos empresas: HP Inc. (computadoras e impresoras) y Hewlett Packard Enterprise (servicios empresariales).</li>
+        </ul>
+
+        <div class="mt-4">
+            <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

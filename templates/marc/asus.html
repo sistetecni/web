@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="mb-4">Historia de Asus</h1>
+        <p class="fs-5">
+            ASUS fue fundada en 1989 en Taiwán por cuatro ex ingenieros de Acer, con el objetivo de crear placas base de alta calidad. Rápidamente se convirtió en uno de los principales fabricantes en este segmento a nivel mundial.        </p>
+        <p class="fs-5">
+            En los años 2000, la empresa amplió su catálogo incluyendo laptops, tarjetas gráficas y otros componentes. Su netbook Eee PC, lanzada en 2007, fue un gran éxito global por su tamaño compacto y bajo precio.
+        </p>
+        <p class="fs-5">
+            Hoy, ASUS es reconocida por su innovación, especialmente en líneas como ROG para gamers y ZenBook para profesionales, manteniéndose como una marca líder en tecnología a nivel global.
+        </p>
+
+        <h3 class="mt-4">📌 Datos Interesantes:</h3>
+        <ul class="fs-5">
+            <li>🏠 <strong>Líder en placas base:</strong> ASUS ha sido durante años el mayor fabricante de placas base del mundo, con más de 500 millones vendidas desde su fundación.</li>
+            <li>💼 <strong>Republic of Gamers (ROG):</strong> Su línea ROG es una de las más reconocidas en el mundo gamer por ofrecer alto rendimiento, refrigeración avanzada y diseño agresivo.</li>
+            <li>🌍 <strong>Presencia en el espacio:</strong> Un portátil ASUS fue utilizado en la Estación Espacial Internacional, funcionando sin fallas durante más de 600 días.</li>
+            <li>🔄 <strong>Innovación en laptops:</strong> ASUS fue pionera en lanzar laptops con pantalla secundaria táctil, como la ZenBook Duo, mejorando la productividad y el diseño multitarea.</li>
+        </ul>
+
+        <div class="mt-4">
+            <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

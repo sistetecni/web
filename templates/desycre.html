@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2>Desarrollo y Creación</h2>
+    <p style="font-size: 18px;">
+      En <strong>ByteCorp</strong>, nos especializamos en la <strong>creación de soluciones digitales personalizadas</strong>. Nuestro equipo de desarrolladores trabaja contigo para transformar tus ideas en herramientas funcionales y atractivas.
+    </p>
+
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ url_for('static', filename='imagenes/desycrea.png') }}" class="card-img-top" alt="Sitios Web">
+          <div class="card-body">
+            <h5 class="card-title">Desarrollo Web</h5>
+            <p class="card-text">Creamos páginas web responsivas, modernas y optimizadas para SEO. Ideal para negocios, portafolios o servicios.</p>
+            <a href="https://wa.link/w7naix" class="btn btn-primary w-100 mt-5">  Solicitar Proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ url_for('static', filename='imagenes/desapp.png') }}" class="card-img-top" alt="Aplicaciones Móviles">
+          <div class="card-body">
+            <h5 class="card-title">Aplicaciones Móviles</h5>
+            <p class="card-text">Diseñamos apps para Android y iOS a medida. Perfectas para empresas que quieren escalar sus servicios móviles.</p>
+            <a href="https://wa.link/w7naix" class="btn btn-primary w-100 mt-5">  Iniciar Proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ url_for('static', filename='imagenes/desemp.png') }}" class="card-img-top" alt="Software Empresarial">
+          <div class="card-body">
+            <h5 class="card-title">Software Empresarial</h5>
+            <p class="card-text">Soluciones internas como CRMs, ERPs o sistemas de gestión adaptados 100% a tu operación.</p>
+            <a href="https://wa.link/w7naix" class="btn btn-primary w-100 mt-5">  Contacta Con Nosotros</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

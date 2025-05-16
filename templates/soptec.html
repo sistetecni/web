@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2>Soporte Técnico</h2>
+    <p style="font-size: 18px;">
+      Nuestro equipo de <strong>soporte técnico</strong> está preparado para ayudarte con cualquier problema tecnológico que enfrentes. Aquí te contamos cómo podemos ayudarte:
+    </p>
+
+    <div class="mt-5">
+      <!-- Mantenimiento preventivo -->
+      <div class="d-flex align-items-start mb-4">
+        <img src="{{ url_for('static', filename='imagenes/manprev.png') }}" alt="Mantenimiento Preventivo" style="width: 80px; height: 80px; margin-right: 20px;">
+        <div>
+          <h4>Mantenimiento Preventivo</h4>
+          <p>Realizamos limpiezas físicas y revisiones periódicas para prevenir daños y prolongar la vida útil de tus equipos.</p>
+          <a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Solicitar Reparacion</a>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">AVISO</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                Lo sentimos, pero no tenemos fechas disponibles en este momento
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reparaciones -->
+      <div class="d-flex align-items-start mb-4">
+        <img src="{{ url_for('static', filename='imagenes/repair.png') }}" alt="Reparaciones" style="width: 80px; height: 80px; margin-right: 20px;">
+        <div>
+          <h4>Reparaciones</h4>
+          <p>Solucionamos fallas en hardware y software con diagnóstico profesional y repuestos certificados.</p>
+          <a href="https://wa.link/w7naix" class="btn btn-secondary">Solicitar Reparacion</a>
+        </div>
+      </div>
+
+      <!-- Soporte remoto -->
+      <div class="d-flex align-items-start mb-4">
+        <img src="{{ url_for('static', filename='imagenes/soprem.png') }}" alt="Soporte Remoto" style="width: 80px; height: 80px; margin-right: 20px;">
+        <div>
+          <h4>Soporte Remoto</h4>
+          <p>Atención inmediata por conexión remota para resolver problemas de manera rápida y eficiente sin salir de casa.</p>
+          <a href="https://wa.link/w7naix" class="btn btn-secondary">Contactarse ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

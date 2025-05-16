@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='imagenes/hp1.jpeg') }}" class="img-fluid rounded-start" alt="Hp Probook 440 G1" height="500px" width="700px">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h2 class="card-title">Hp Probook 440 G1</h2>
+                        <p class="card-text fs-5">La combinación perfecta de potencia, portabilidad y diseño profesional. Ideal para usuarios exigentes en el trabajo o los estudios.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">💽 <strong>Disco SSD de 512 GB</strong> – Alta velocidad y capacidad de almacenamiento</li>
+                            <li class="list-group-item">🧠 <strong>16 GB RAM</strong> – Excelente para multitareas</li>
+                            <li class="list-group-item">🖥️ <strong>Pantalla de 14"</strong> – Compacta pero cómoda</li>
+                            <li class="list-group-item">⚙️ <strong>Procesador Intel Core i5</strong> – Buen rendimiento</li>
+                            <li class="list-group-item">🕒 <strong>Batería en buen estado</strong></li>
+                            <li class="list-group-item">🧳 <strong>Diseño compacto y profesional</strong></li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+                            <a href="#" class="btn btn-primary">Contactar o Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

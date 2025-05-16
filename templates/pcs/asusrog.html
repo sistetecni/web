@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='imagenes/asus1.jpeg') }}" class="img-fluid rounded-start" alt="Asus Rog Strix" height="500px" width="700px">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h2 class="card-title">Asus Rog Strix</h2>
+                    <p class="card-text fs-5">Una estación de trabajo y juego con potencia extrema. Perfecto para diseñadores, desarrolladores y gamers.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">💽 <strong>Disco SSD de 1000 GB</strong> – Velocidad y capacidad de sobra</li>
+                        <li class="list-group-item">🧠 <strong>32 GB RAM</strong> – Fluidez incluso en las tareas más exigentes</li>
+                        <li class="list-group-item">🕒 <strong>Tarjeta de video de 8 GB</strong> – Ideal para gaming o diseño gráfico</li>
+                        <li class="list-group-item">🖥️ <strong>Pantalla de 16"</strong> – Amplia y clara</li>
+                        <li class="list-group-item">⚙️ <strong>Procesador Intel Core i7</strong> – Potencia de última generación</li>
+                        <li class="list-group-item">👾 <strong>Diseño gamer</strong> – Estética y funcionalidad</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="{{ url_for('rentas') }}" class="btn btn-secondary">Volver</a>
+                        <a href="#" class="btn btn-primary">Contactar o Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
